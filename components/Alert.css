@@ -1,0 +1,29 @@
+.alert {
+    --background: #212121;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 0.25rem solid inset rgb(255, 255, 255, 0.50);
+    background: var(--background);
+}
+
+.alert > p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    color: rgba(225, 225, 225, 0.64);
+}
+
+.alert.alert-blue {
+    --background: royalblue;
+}
+
+.alert.alert-red {
+    --background: crimson;
+}
+
+.alert.alert-yellow {
+    --background: goldenrod;
+}
+
+.alert.alert-green {
+    --background: mediumseagreen;
+}

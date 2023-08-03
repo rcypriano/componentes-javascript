@@ -22,7 +22,14 @@ export function Section(props) {
     //criando o content para inserir os filhos passados
     const content = document.createElement('div')
     content.classList.add('content')
-    content.append(props.children)
+//inserindo o conteúdo passado pelas propriedades como filho
+// ? é conhecido como Elvis Operator ou Ternário
+// é como um if/else de 1 linha apenas
+    const children = Array.isArray(props.children)
+    
+        ? props.children
+        : [props.children];
+    content.append(...children)
     section.append(header,content);
 
     return section;
