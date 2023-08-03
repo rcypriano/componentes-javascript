@@ -1,4 +1,4 @@
-import { Accordion } from '../components/accordion.js'
+import { Accordion, Section } from '../components/index.js'
 
 //propriedades que vamos passar para a função Accordion
 const accordionProps = {
@@ -9,5 +9,10 @@ const accordionProps = {
     ]
 }
 
-document.body.append(Accordion(accordionProps));
+document.body.append(
+    Section({
+        title: Accordion.name,
+        children: Accordion(accordionProps),
+    })
+);
 
