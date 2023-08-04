@@ -1,0 +1,29 @@
+.button {
+    --background: #212121;
+    --color: #f8f8f8;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--light-shadow);
+    background: var(--background);
+    color: var(--color);
+}
+
+.button.button-blue {
+    --background: royalblue;
+    --color: #f8f8f8;
+}
+
+.button.button-green {
+    --background: mediumseagreen;
+    --color: #111111;
+}
+
+.button.button-red {
+    --background: crimson;
+    --color: #f8f8f8;
+}
+
+.button.button-golden {
+    --background: goldenrod;
+    --color: #f8f8f8;
+}
