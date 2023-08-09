@@ -1,4 +1,4 @@
-import { Accordion, Section, Alert, Button } from '../components/index.js'
+import { Accordion, Section, Alert, Button, Tab } from '../components/index.js'
 
 //propriedades que vamos passar para a função Accordion
 const accordionProps = {
@@ -11,33 +11,59 @@ const accordionProps = {
 
 document.body.append(
     Section({
-        title: Accordion.name,
-        children: Accordion(accordionProps),
-    }),
-    Section({
-        title: Alert.name,
+        title: Tab.name,
         children: [
-            Alert({text: "Hello World blue", color: "blue"}),
-            Alert({text: "Hello World green", color: "green"}),
-            Alert({text: "Hello World red", color: "red"}),
-            Alert({text: "Hello World yellow", color: "yellow"}),
+            Tab({
+                data: [
+                    { title: "Accordions", children: Accordion(accordionProps)},
+
+                    {
+                        title: "Alerts",
+                        children: [
+                            Alert({ text: "Hello World red", color: "red" }),
+                            Alert({ text: "Hello World yellow", color: "yellow"}),
+                        ],
+                    },
+                    
+                    {
+                        title: "Buttons",
+                        children: [
+                            Button({ children: "Botão 2", type: "button", color: "blue" }),
+                            Button({ children: "Botão 3", type: "button", color: "red" }),
+                        ],
+                    },
+                ],
+            }),
         ],
     }),
-    Section({
-        title: Button.name,
-        children: [
-            Button({children: "Botão 1"}),
-            Button({children: "Botão 2", type: "button"}),
-            Button({children: 'Botão 3', type: "button", color: "red" }),
-            Button({
-                children: 'Botão 4',
-                type: "button",
-                color: "green",
-                onclick: function () {
-                    alert("on click funcionando");
-                }
-            }),
-        ]
-    }),
 );
-
+//     Section({
+//         title: Accordion.name,
+//         children: Accordion(accordionProps),
+//     }),
+//     Section({
+//         title: Alert.name,
+//         children: [
+//             Alert({text: "Hello World blue", color: "blue"}),
+//             Alert({text: "Hello World green", color: "green"}),
+//             Alert({text: "Hello World red", color: "red"}),
+//             Alert({text: "Hello World yellow", color: "yellow"}),
+//         ],
+//     }),
+//     Section({
+//         title: Button.name,
+//         children: [
+//             Button({children: "Botão 1"}),
+//             Button({children: "Botão 2", type: "button"}),
+//             Button({children: 'Botão 3', type: "button", color: "red" }),
+//             Button({
+//                 children: 'Botão 4',
+//                 type: "button",
+//                 color: "green",
+//                 onclick: function () {
+//                     alert("on click funcionando");
+//                 }
+//             }),
+//         ]
+//     }),
+// );

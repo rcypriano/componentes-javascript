@@ -1,0 +1,40 @@
+.tab {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+  
+  .tab > .tab-header {
+    display: flex;
+    gap: 0.25rem;
+  }
+  
+  .tab > .tab-header > .tab-header-item {
+    flex: 1;
+    background: royalblue;
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: var(--boder);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+  }
+  .tab > .tab-header > .tab-header-item:hover {
+    background: #214ac5;
+  }
+  
+  .tab > .tab-header > .tab-header-item.active {
+    background: #0a38c2;
+  }
+  
+  .tab > .tab-content > .tab-content-item {
+    display: none;
+  }
+  
+  .tab > .tab-content > .tab-content-item.active {
+    display: block;
+  }
